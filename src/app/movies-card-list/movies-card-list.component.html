@@ -1,0 +1,14 @@
+<mat-card *ngFor="let movie of movies">
+    <mat-card-header>
+        <mat-card-title>{{movie.title}}</mat-card-title>
+    </mat-card-header>
+    
+    <img mat-card-image [src]="getSrc(movie.cover)">
+    <!--<img mat-card-image [src]="data:image/jpg, {{movie.cover}}">-->
+    <mat-card-content>
+        <p>{{movie.description}}</p>
+        <p>Release at: {{movie.release}}</p>
+        <p>Cast: {{movie.cast}}</p>
+        <p>Rating: {{movie.rating}}</p>
+    </mat-card-content>
+</mat-card>
